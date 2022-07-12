@@ -1,0 +1,2 @@
+local lp = game:service'Players'.LocalPlayer;
+game:GetService("Workspace").chunk11["#Item"]:MoveTo(lp.Character.LeftHand.Position)
