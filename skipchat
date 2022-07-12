@@ -12,7 +12,7 @@ function GetMainData()
 end
 Data = GetMainData()
 AuthKey = debug.getupvalue(Data["Network"]["getAuthKey"], 1)
-local SkipChat = value
+local SkipChat = true
 local OldWait;
 OldWait = hookfunction(Data["NPCChat"]["AdvanceSignal"]["wait"], function(...)
 if SkipChat then
