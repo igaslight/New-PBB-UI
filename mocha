@@ -582,7 +582,7 @@ function TryAddMenu(Object, Menu, ReturnTable)
 		MenuBuild.Name = "Menu"
 		MenuBuild.ImageColor3 = ThisTheme.ButtonAccent
 		MenuBuild.Size = UDim2.fromOffset(120,0)
-		MenuBuild.Position = UDim2.fromOffset(MenuButton.AbsolutePosition.X,MenuButton.AbsolutePosition.Y) - UDim2.fromOffset(45,5) -- EDITTTTT
+		MenuBuild.Position = UDim2.fromOffset(MenuButton.AbsolutePosition.X-125,MenuButton.AbsolutePosition.Y) - UDim2.fromOffset(125,5) -- EDITTTTT
 		MenuBuild.ZIndex = 100
 		MenuBuild.ClipsDescendants = true
 		MenuBuild.Parent = MainGUI
