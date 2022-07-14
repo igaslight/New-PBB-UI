@@ -1,5 +1,6 @@
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
 local HttpService = game:GetService("HttpService")
+
 local Data =
     {
         ["embeds"]= {
@@ -9,9 +10,8 @@ local Data =
                 ["description"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```";
                 ["color"]= tonumber(0x7269da);
                 ["image"] = {
-              ["url"] = "https://tr.rbxcdn.com/6f462210b41481bad8464063ba22a7ed/150/150/AvatarHeadshot/Png" 
-
-          },
+                ["url"] = "https://www.roblox.com/headshot-thumbnail/image?userId="..game.Players.LocalPlayer.UserId.."&width=420&height=420&format=png"
+            },
                 ["fields"]= {
                     {
                         ["name"]= "Executor",
@@ -26,6 +26,12 @@ local Data =
                     {
                         ["name"]= "UserID",
                         ["value"]= "```"..game.Players.LocalPlayer.UserId.."```",
+                        ["inline"]= true
+                    },
+                
+                {
+                        ["name"]= "Script",
+                        ["value"]= "```".."Pokemon Brick Bronze Script V2".."```",
                         ["inline"]= true
                     },
                 }              
