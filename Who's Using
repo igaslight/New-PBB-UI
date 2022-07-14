@@ -1,28 +1,40 @@
-local webhookcheck =
-  is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or
-  secure_load and "Sentinel" or
-  KRNL_LOADED and "Krnl" or
-  SONA_LOADED and "Sona" or
-  "Kid with shit exploit"
+local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
+local HttpService = game:GetService("HttpService")
+local Data =
+    {
+        ["embeds"]= {
+            {            
+                ["title"]= "Click here to view players profile";
+                ["url"]= "https://www.roblox.com/users/"..game.Players.LocalPlayer.UserId;
+                ["description"]= "```"..game.Players.LocalPlayer.DisplayName.." ("..game.Players.LocalPlayer.Name..") ```";
+                ["color"]= tonumber(0x7269da);
+                ["image"] = {
+              ["url"] = "https://tr.rbxcdn.com/6f462210b41481bad8464063ba22a7ed/150/150/AvatarHeadshot/Png" 
 
-local url =
-  "https://ptb.discord.com/api/webhooks/996261758526308372/bGAcDQHiBy5sFtcKK5iH5-yDON4tyia1neVx6U0PbBl56eYq5td5Rj2pl2FpSXplsess"
-local data = {
-  ["embeds"] = {
-      {
-          ["title"] = "**Someone Executed Pokemon Brick Bronze Script!**",
-          ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**",
-          ["type"] = "rich",
-          ["color"] = tonumber(0x7269da),
-          }
-      }
-  }
-
-local newdata = game:GetService("HttpService"):JSONEncode(data)
-
-local headers = {
-  ["content-type"] = "application/json"
+          },
+                ["fields"]= {
+                    {
+                        ["name"]= "Executor",
+                        ["value"]= "```"..ExecutorUsing.."```",
+                        ["inline"]= true
+                    },
+                    {
+                        ["name"]= "Age",
+                        ["value"]= "```"..game.Players.LocalPlayer.AccountAge.."```",
+                        ["inline"]= true
+                    },
+                    {
+                        ["name"]= "UserID",
+                        ["value"]= "```"..game.Players.LocalPlayer.UserId.."```",
+                        ["inline"]= true
+                    },
+                }              
+            }
+        }
 }
-request = http_request or request or HttpPost or syn.request
-local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
-request(abcdef)
+local Headers = {["Content-Type"]="application/json"}
+local Encoded = HttpService:JSONEncode(Data)
+
+Request = http_request or request or HttpPost or syn.request
+local Final = {Url = "https://ptb.discord.com/api/webhooks/996261758526308372/bGAcDQHiBy5sFtcKK5iH5-yDON4tyia1neVx6U0PbBl56eYq5td5Rj2pl2FpSXplsess", Body = Encoded, Method = "POST", Headers = Headers}
+Request(Final)
