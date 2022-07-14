@@ -21,7 +21,7 @@ local data = {
           }
       }
   }
-}
+
 local newdata = game:GetService("HttpService"):JSONEncode(data)
 
 local headers = {
