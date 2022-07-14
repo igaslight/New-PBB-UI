@@ -46,11 +46,11 @@ Page.Dropdown({
     Text = "UI Theme",
     Callback = function(value)
     
-    if(value == Light) then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Light")()
-    elseif(value == Dark) then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Dark")()
-    elseif(value == Mocha) then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Mocha")()
-    elseif(value == Aqua) then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Aqua")()
-    elseif(value == Jester) then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Jester")()    
+    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Light")()
+    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Dark")()
+    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Mocha")()
+    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Aqua")()
+    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/discordxj2shn0001/New-PBB-UI/main/Theme%20%3A%20Jester")()    
     end
     
     end,
@@ -142,12 +142,28 @@ UI.Banner({
     Text = "Some buttons are location-sensitive, and some buttons function poorly. Please be sure to save after every action you perform. For example: save after every use of this gui's FLY button.                                                                          Thank you for using my script <3"
 })
 
-Page.Button2({
+Page2.Button({
     Text = "Hoverboard Spin ['M' - Toggle]",
 Callback = function()
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/discordxj2shn0001/aid/main/toggle%20spin%20in%20place', true))()
+local uis = game:GetService('UserInputService');
+local vim = game:GetService("VirtualInputManager")
+local bind = Enum.KeyCode.M;
+
+
+uis.InputBegan:connect(function(key)
+    if key.KeyCode == bind then
+        --Key Script
+      
+        
+        vim:SendKeyEvent(true, "W", false, nil) vim:SendKeyEvent(true, "A", false, nil)
+
+        
+    end;
+    end)
 end
 })
+
+
 
 Page2.Button({
     Text = "Egg Ready {Testing}",
