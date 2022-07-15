@@ -54,7 +54,7 @@ _p.Network:get('PDS','sellItem', "powerbracer", 89)
 })
 
 Page.Button({
-    Text = "Tix [+2000]",
+    Text = "Tix [+1]",
     Callback = function()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/inf%20tix"))()
     end
