@@ -57,6 +57,21 @@ Page.Dropdown({
     Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
 })
 
+Page.Button({
+    Text = "Tix [+1000]",
+    Callback = function()
+		local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "Events") then
+                   _p = v
+                   break
+               end
+           end
+        end
+_p.Network:get("PDS", "AlolanReward",1000)
+    end
+})
 
 Page.Button({
     Text = "Skip Chat",
@@ -408,13 +423,10 @@ local data = {
           ["description"] = "Username: " .. game.Players.LocalPlayer.Name.." with **"..webhookcheck.."**".." said: "..value,
           ["type"] = "rich",
           ["color"] = tonumber(0x7269da),
-          ["image"] = {
-              ["url"] = "http://www.roblox.com/Thumbs/Avatar.ashx?x=150&y=150&Format=Png&username=" ..
-                  tostring(game:GetService("Players").LocalPlayer.Name)
           }
       }
   }
-}
+
 local newdata = game:GetService("HttpService"):JSONEncode(data)
 
 local headers = {
@@ -425,6 +437,3 @@ local abcdef = {Url = url, Body = newdata, Method = "POST", Headers = headers}
 request(abcdef)
     end
 })
-
-
-
