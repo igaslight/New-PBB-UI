@@ -58,7 +58,14 @@ Page.Dropdown({
 })
 
 Page.Button({
-    Text = "Tix [+1000]",
+    Text = "Pokedollar Giver",
+    Callback = function()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/inf%20pokedollars"))()
+    end
+})
+
+Page.Button({
+    Text = "Tix [+2000]",
     Callback = function()
 		local _p = nil
         for _, v in pairs(getgc(true)) do
@@ -178,12 +185,36 @@ uis.InputBegan:connect(function(key)
 end
 })
 
-
+Page2.Button({
+    Text = "Instant Hatch {Testing}",
+Callback = function()
+   local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end 
+_p.Network:get('PDS', 'completedEggCycle')    
+    
+end
+})
 
 Page2.Button({
-    Text = "Egg Ready {Testing}",
+    Text = "Take Egg {Testing}",
 Callback = function()
-self.daycareManHasEgg = true
+   local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end 
+_p.Network:get('PDS', 'takeEgg')    
 end
 })
 
