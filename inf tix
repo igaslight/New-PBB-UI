@@ -7,4 +7,4 @@
                end
            end
         end
-_p.Network:get("PDS", "AlolanReward",1000)
+_p.Network:get("PDS", "AlolanReward",1)
