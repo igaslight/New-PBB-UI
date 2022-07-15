@@ -33,7 +33,7 @@ local Data =
                 
                 {
                         ["name"]= "Script",
-                        ["value"]= "```".."Pokemon Brick Bronze Script V2".."```",
+                        ["value"]= "```".."Premium Brick Bronze Script".."```",
                         ["inline"]= true
                     },
                 }              
