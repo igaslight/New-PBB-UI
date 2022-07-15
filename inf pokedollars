@@ -9,7 +9,7 @@ local _p = nil
                end
            end
         end
-         _p.Network:get("PDS", "AlolanReward",10000)
+         _p.Network:get("PDS", "AlolanReward",15000)
         _p.Network:get('PDS', 'getShop','arcade')
 _p.Network:get('PDS','tMaxBuy', 2)
 _p.Network:get('PDS','buyWithTix', 2, 99)
