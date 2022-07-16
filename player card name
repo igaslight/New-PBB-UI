@@ -7,6 +7,4 @@
                end
            end
         end
-        
     _p.Network:post('PDS', 'chooseName', value)
-    
