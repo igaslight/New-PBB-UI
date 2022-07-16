@@ -7,8 +7,5 @@
                end
            end
         end
-        if value then _p.Repel.steps = 1000000
-        else
-        _p.Repel.steps = 0
-    end
-    Enabled = false
+        _p.Repel.steps = 1000000
+
