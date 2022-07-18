@@ -113,7 +113,7 @@ Page.Toggle({
 Page.Button({
     Text = "Clip Fly ['X' - Toggle]",
 Callback = function()
-loadstring(game:HttpGetAsync('https://pastebin.com/raw/PLc80ja0', true))()
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Universal%20Fly', true))()
 end
 })
 
