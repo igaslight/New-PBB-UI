@@ -26,11 +26,11 @@ Settings.Dropdown({
     Text = "UI Theme",
     Callback = function(value)
     
-    if(value == "Light") then loadstring(game:HttpGet"https://pastebin.com/raw/yQGz6Exc")()
-    elseif(value == "Dark") then loadstring(game:HttpGet"https://pastebin.com/raw/MkQuRAm5")()
-    elseif(value == "Mocha") then loadstring(game:HttpGet"https://pastebin.com/raw/5vdTdHbf")()
-    elseif(value == "Aqua") then loadstring(game:HttpGet"https://pastebin.com/raw/fTbtp5e4")()
-    elseif(value == "Jester") then loadstring(game:HttpGet"https://pastebin.com/raw/sExn9x7Y")()    
+    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Light")()
+    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Dark")()
+    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Mocha")()
+    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Aqua")()
+    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Jester")()    
     end
     end,
     Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
@@ -84,9 +84,27 @@ Page.Toggle({
     Text = "Repel",
     Callback = function(value)
         if value then 
-        loadstring(game:HttpGet("https://pastebin.com/raw/RpLfj5EC"))() -- true
+            local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        _p.Repel.steps = 1000000
         else
-        loadstring(game:HttpGet("https://pastebin.com/raw/hFdPNhdG"))() -- false
+            local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        _p.Repel.steps = 0
     end
     Enabled = false
     end
