@@ -7,7 +7,7 @@ loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslightwomen/a
 
 local UI = Material.Load({
      Title = "Mew Menu",
-     Style = 1,
+     Style = 4,
      SizeX = 250,
      SizeY = 330,
      Theme = "Mocha"
