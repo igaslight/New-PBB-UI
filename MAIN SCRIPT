@@ -21,7 +21,6 @@ local Settings = UI.New({
     Title = "Settings"
 })
 
-
 Settings.Dropdown({
     Text = "UI Theme",
     Callback = function(value)
@@ -36,8 +35,40 @@ Settings.Dropdown({
     Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
 })
 
+Settings.Button({
+    Text = "Skip Meeting Jake",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("MeetJake"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Meeting Parents",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("MeetParents"))
+    end
+})
+
 Page.Button({
-    Text = "Pokedollar Giver",
+    Text = "Pokedollars Giver",
     Callback = function()
 --infinite pokedollars script
 local _p = nil
