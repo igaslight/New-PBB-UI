@@ -1,9 +1,9 @@
-local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/mocha"))()
+local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
--- discord webhook ( when someone launched the script )
-loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Who's%20Using")()
+-- discord webhook ( when someone launches the script )
+loadstring(game:HttpGet"https://raw.githubusercontent.com/ilovelatinawomen/ilovelatinas/main/webhook")()
 -- ANTI AFK BLOCK --
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslight/aid/main/anti%20afk', true))()
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslightwomen/aid/main/anti%20afk', true))()
 
 local UI = Material.Load({
      Title = "Mew Menu",
@@ -17,15 +17,20 @@ local Page = UI.New({
     Title = "Main"
 })
 
-Page.Dropdown({
+local Settings = UI.New({
+    Title = "Settings"
+})
+
+
+Settings.Dropdown({
     Text = "UI Theme",
     Callback = function(value)
     
-    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Light")()
-    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Dark")()
-    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Mocha")()
-    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Aqua")()
-    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Jester")()    
+    if(value == "Light") then loadstring(game:HttpGet"https://pastebin.com/raw/yQGz6Exc")()
+    elseif(value == "Dark") then loadstring(game:HttpGet"https://pastebin.com/raw/MkQuRAm5")()
+    elseif(value == "Mocha") then loadstring(game:HttpGet"https://pastebin.com/raw/5vdTdHbf")()
+    elseif(value == "Aqua") then loadstring(game:HttpGet"https://pastebin.com/raw/fTbtp5e4")()
+    elseif(value == "Jester") then loadstring(game:HttpGet"https://pastebin.com/raw/sExn9x7Y")()    
     end
     end,
     Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
@@ -35,74 +40,53 @@ Page.Button({
     Text = "Pokedollar Giver",
     Callback = function()
 --infinite pokedollars script
-
-local _p = nil
-        for _, v in pairs(getgc(true)) do
-           if typeof(v) == "table" then
-               if rawget(v, "PlayerData") then
-                   _p = v
-                   break
-               end
-           end
-        end
-         _p.Network:get("PDS", "AlolanReward",155000)
-        _p.Network:get('PDS', 'getShop','arcade')
-_p.Network:get('PDS','tMaxBuy', 2)
-_p.Network:get('PDS','buyWithTix', 2, 89)
-_p.Network:get('PDS','sellItem', "powerbracer", 89)
+loadstring(game:HttpGet"https://pastebin.com/raw/HCDhirg7")()   
     end
 })
 
 Page.Button({
     Text = "Tix [+1]",
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/inf%20tix"))()
+--infinite tix script
+loadstring(game:HttpGet("https://pastebin.com/raw/dTJVVV4U"))()
     end
 })
 
 Page.Button({
     Text = "Skip Chat",
     Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/skipchat"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/5dcu1Swy"))()
     end
 })
 
 Page.Button({
     Text = "Heal",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/heal"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/cUsLpEvj"))()
 end
 })
 
 Page.Button({
     Text = "Fly",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/fly"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/wMhr459b"))()
 end
 })
 
 Page.Button({
     Text = "Unstuck",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/unstuck"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/KH29fLJw"))()
 end
 })
 
 Page.Toggle({
     Text = "Repel",
     Callback = function(value)
-       local _p = nil
-        for _, v in pairs(getgc(true)) do
-           if typeof(v) == "table" then
-               if rawget(v, "PlayerData") then
-                   _p = v
-                   break
-               end
-           end
-        end
-        if value then _p.Repel.steps = 1000000
+        if value then 
+        loadstring(game:HttpGet("https://pastebin.com/raw/RpLfj5EC"))() -- true
         else
-        _p.Repel.steps = 0
+        loadstring(game:HttpGet("https://pastebin.com/raw/hFdPNhdG"))() -- false
     end
     Enabled = false
     end
@@ -111,7 +95,7 @@ Page.Toggle({
 Page.Button({
     Text = "Clip Fly ['X' - Toggle]",
 Callback = function()
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Universal%20Fly', true))()
+loadstring(game:HttpGetAsync('https://pastebin.com/raw/PLc80ja0', true))()
 end
 })
 
@@ -140,12 +124,7 @@ end
 Page2.Button({
     Text = "Bring Daycare Man",
 Callback = function()
-local lp = game:service'Players'.LocalPlayer;
-game:GetService("Workspace").chunk9["DayCareMan"]:MoveTo(lp.Character.LeftHand.Position)
-local Object = game.ReplicatedStorage.DayCare:WaitForChild("DayCareLady")
-local CloneObject = Object:Clone()
-CloneObject.Parent = game.Workspace.chunk9
-game:GetService("Workspace").chunk9["DayCareLady"]:MoveTo(lp.Character.LeftHand.Position)
+loadstring(game:HttpGet("https://pastebin.com/raw/49ZBpgYR"))()
 end
 })
 
@@ -163,16 +142,7 @@ local Page3 = UI.New({
 Page3.TextField({
     Text = "Player Card Name",
     Callback = function(value)
-        local _p = nil
-        for _, v in pairs(getgc(true)) do
-           if typeof(v) == "table" then
-               if rawget(v, "PlayerData") then
-                   _p = v
-                   break
-               end
-           end
-        end
-    _p.Network:post('PDS', 'chooseName', value)
+    loadstring(game:HttpGet("https://pastebin.com/raw/T9AXz3Rf"))()
     end
 })
 
@@ -190,7 +160,7 @@ Page3.Slider({
 Page3.Button({
     Text = "Fps Booster",
 Callback = function()
-loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslight/aid/main/fps%20booster', true))()
+loadstring(game:HttpGetAsync('https://pastebin.com/raw/97d1LwPk', true))()
 end
 })
 
@@ -249,7 +219,7 @@ end
 Page3.Button({
     Text = "Ctrl + Click TP",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/aid/main/ctrl%20%2B%20click%20tp"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/qR6GbWdD"))()
 end
 })
 
@@ -274,21 +244,21 @@ local Page4 = UI.New({
 Page4.Button({
     Text = "BP Shop",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/BP%20shop"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/8zkK4pLG"))()
 end
 })
 
 Page4.Button({
     Text = "Shop",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Shop"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/iHgNAxUn"))()
 end
 })
 
 Page4.Button({
     Text = "Stoneshop",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Stone%20Shop"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/XNArzkXX"))()
 end
 })
 
@@ -299,42 +269,42 @@ local Page5 = UI.New({
 Page5.Button({
     Text = "Absol + Eevee",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/absol%20%2B%20eevee%20giver"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/ZDgfKaip"))()
 end
 })
 
 Page5.Button({
     Text = "Enable RTD + Running",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/enable%20rtd%20%2B%20running"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/0bBqeXfN"))()
 end
 })
 
 Page5.Button({
     Text = "Gives Leftovers",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/give%20leftovers"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/qEbp2kqM"))()
 end
 })
 
 Page5.Button({
     Text = "Kings Rock",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/kings%20rock%20giver"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/fgaNVs24"))()
 end
 })
 
 Page5.Button({
     Text = "BlackWhite Egg",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/bw%20egg%20giver"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/8NQ8ew5v"))()
 end
 })
 
 Page5.Button({
     Text = "Gives SawsbuckCoffee",
 Callback = function()
-loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/coffee%20giver"))()    
+loadstring(game:HttpGet("https://pastebin.com/raw/5bbMXdrv"))()    
 end
 })
 
@@ -345,7 +315,7 @@ local Page5 = UI.New({
 Page5.Button({
     Text = "Show UMV Rocks",
 Callback = function()
-loadstring(game:HttpGet("https://github.com/igaslight/New-PBB-UI/blob/main/Show%20UMV%20Rocks"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/uubLUH5d"))()
 end
 })
 
@@ -355,6 +325,6 @@ local Page6 = UI.New({
 Page6.TextField({
     Text = "Type Here",
     Callback = function(value)
-loadstring(game:HttpGet(" https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/bug%20report%20webhook"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/bug%20report%20webhook"))()
     end
 })
