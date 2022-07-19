@@ -1,7 +1,7 @@
 local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinlei/MaterialLua/master/Module.lua"))()
 
 -- discord webhook ( when someone launches the script )
-loadstring(game:HttpGet"https://raw.githubusercontent.com/ilovelatinawomen/ilovelatinas/main/webhook")()
+--loadstring(game:HttpGet"https://raw.githubusercontent.com/ilovelatinawomen/ilovelatinas/main/webhook")()
 -- ANTI AFK BLOCK --
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslightwomen/aid/main/anti%20afk', true))()
 
