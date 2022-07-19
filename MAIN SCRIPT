@@ -6,10 +6,10 @@ loadstring(game:HttpGet"https://raw.githubusercontent.com/ilovelatinawomen/ilove
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslightwomen/aid/main/anti%20afk', true))()
 
 local UI = Material.Load({
-     Title = "Mew Menu",
-     Style = 3,
-     SizeX = 250,
-     SizeY = 330,
+     Title = "Mew Menu Is The Best Pokemon Brick Bronze Menu",
+     Style = 1,
+     SizeX = 650,
+     SizeY = 400,
      Theme = "Mocha"
 })
 
@@ -20,6 +20,35 @@ local Page = UI.New({
 local Settings = UI.New({
     Title = "Settings"
 })
+
+local Gyms = UI.New({
+    Title = "Gyms"
+})
+
+Gyms.Dropdown({
+    Text = "1st Gym",
+    Callback = function(value)
+    
+    if(value == "Leader") then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(600.128, 423.098, 1046.85)
+    elseif(value == "Exit") then loadstring(game:HttpGet("https://pastebin.com/raw/KH29fLJw"))()
+   
+    end
+    end,
+    Options = {"Leader", "Exit"}
+})
+
+Gyms.Dropdown({
+    Text = "2nd Gym",
+    Callback = function(value)
+    
+    if(value == "Leader") then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(399.877, 491.344, 870.29)
+    elseif(value == "Exit") then loadstring(game:HttpGet("https://pastebin.com/raw/KH29fLJw"))()
+   
+    end
+    end,
+    Options = {"Leader", "Exit"}
+})
+
 
 Settings.Dropdown({
     Text = "UI Theme",
@@ -140,6 +169,54 @@ local _p = nil
            end
         end
         print(_p.PlayerData:completeEvent("IntroducedToGym1"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Groudon Scene",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("GroudonScene"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Jake Battle",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("JakeBattle2"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Talk To Jake + Seb",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("TalkToJakeAndSebastian"))
     end
 })
 Page.Button({
@@ -407,6 +484,18 @@ Page5.Button({
     Text = "Absol + Eevee",
 Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/ZDgfKaip"))()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+       
+        _p.Network:get('PDS', 'openPC')
+_p.Network:get('PDS', 'cPC', 'nickname', 1, 'mew_hub')
 end
 })
 
@@ -453,20 +542,6 @@ Page5.Button({
     Text = "Show UMV Rocks",
 Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/uubLUH5d"))()
-end
-})
-
-Page5.Button({
-    Text = "Become A Submarine",
-Callback = function()
-    local Sub = true
-    if LPlr.Character ~= nil and LPlr.Character:FindFirstChild("UMVModel") then
-        Sub = false
-    end
-    if Val ~= nil then
-        Sub = Val
-    end
-    Get:InvokeServer(AuthKey, "ToggleSubmarine", Sub)
 end
 })
 
