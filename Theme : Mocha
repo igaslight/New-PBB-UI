@@ -6,10 +6,10 @@ local Material = loadstring(game:HttpGet("https://raw.githubusercontent.com/Kinl
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslightwomen/aid/main/anti%20afk', true))()
 
 local UI = Material.Load({
-     Title = "Mew Menu",
-     Style = 3,
-     SizeX = 250,
-     SizeY = 330,
+     Title = "Mew Menu Is The Best Pokemon Brick Bronze Menu",
+     Style = 1,
+     SizeX = 650,
+     SizeY = 400,
      Theme = "Mocha"
 })
 
@@ -18,29 +18,210 @@ local Page = UI.New({
 })
 
 local Settings = UI.New({
-    Title = "Settings"
+    Title = "Story"
 })
 
+local Gyms = UI.New({
+    Title = "Gyms"
+})
 
-Settings.Dropdown({
-    Text = "UI Theme",
+Gyms.Dropdown({
+    Text = "1st Gym",
     Callback = function(value)
     
-    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Light")()
-    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Dark")()
-    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Mocha")()
-    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Aqua")()
-    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Jester")()    
+    if(value == "Leader") then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(600.128, 423.098, 1046.85)
+    elseif(value == "Exit") then loadstring(game:HttpGet("https://pastebin.com/raw/KH29fLJw"))()
+   
     end
     end,
-    Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
+    Options = {"Leader", "Exit"}
 })
 
+Gyms.Dropdown({
+    Text = "2nd Gym",
+    Callback = function(value)
+    
+    if(value == "Leader") then game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(399.877, 491.344, 870.29)
+    elseif(value == "Exit") then loadstring(game:HttpGet("https://pastebin.com/raw/KH29fLJw"))()
+   
+    end
+    end,
+    Options = {"Leader", "Exit"}
+})
+
+Settings.Button({
+    Text = "Skip Meeting Jake",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("MeetJake"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Meeting Parents",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("MeetParents"))
+    end
+})
+Settings.Button({
+    Text = "Skip Parents Kidnapped",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("ParentsKidnappedScene"))
+    end
+})
+Settings.Button({
+    Text = "Skip Jake Battle",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("JakeBattle1"))
+    end
+})
+Settings.Button({
+    Text = "Skip Thief Convo",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("BronzeBrickStolen"))
+    end
+})
+Settings.Button({
+    Text = "Track The Thief",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("JakeTracksLinda"))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-262.576, 65.0785, -862.594)
+    end
+})
+Settings.Button({
+    Text = "Introduced To First Gym",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("IntroducedToGym1"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Groudon Scene",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("GroudonScene"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Jake Battle",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("JakeBattle2"))
+    end
+})
+
+Settings.Button({
+    Text = "Skip Talk To Jake + Seb",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("TalkToJakeAndSebastian"))
+    end
+})
 Page.Button({
-    Text = "Pokedollar Giver",
+    Text = "Pokedollars Giver",
     Callback = function()
 --infinite pokedollars script
-loadstring(game:HttpGet"https://pastebin.com/raw/HCDhirg7")()   
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+         _p.Network:get("PDS", "AlolanReward",148500)
+        _p.Network:get('PDS', 'getShop','arcade')
+_p.Network:get('PDS','tMaxBuy', 2)
+_p.Network:get('PDS','buyWithTix', 2, 99)
+_p.Network:get('PDS','sellItem', "powerbracer", 99)
     end
 })
 
@@ -113,8 +294,22 @@ Page.Toggle({
 Page.Button({
     Text = "Clip Fly ['X' - Toggle]",
 Callback = function()
-loadstring(game:HttpGetAsync('https://pastebin.com/raw/PLc80ja0', true))()
+loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Universal%20Fly', true))()
 end
+})
+
+Page.Dropdown({
+    Text = "UI Theme",
+    Callback = function(value)
+    
+    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Light")()
+    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Dark")()
+    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Mocha")()
+    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Aqua")()
+    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Jester")()    
+    end
+    end,
+    Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
 })
 
 local Page2 = UI.New({
@@ -288,6 +483,18 @@ Page5.Button({
     Text = "Absol + Eevee",
 Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/ZDgfKaip"))()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+       
+        _p.Network:get('PDS', 'openPC')
+_p.Network:get('PDS', 'cPC', 'nickname', 1, 'mew_hub')
 end
 })
 
