@@ -66,7 +66,82 @@ local _p = nil
         print(_p.PlayerData:completeEvent("MeetParents"))
     end
 })
-
+Settings.Button({
+    Text = "Skip Parents Kidnapped",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("ParentsKidnappedScene"))
+    end
+})
+Settings.Button({
+    Text = "Skip Jake Battle",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("JakeBattle1"))
+    end
+})
+Settings.Button({
+    Text = "Skip Thief Convo",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("BronzeBrickStolen"))
+    end
+})
+Settings.Button({
+    Text = "Track The Thief",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("JakeTracksLinda"))
+game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-262.576, 65.0785, -862.594)
+    end
+})
+Settings.Button({
+    Text = "Introduced To First Gym",
+    Callback = function()
+local _p = nil
+        for _, v in pairs(getgc(true)) do
+           if typeof(v) == "table" then
+               if rawget(v, "PlayerData") then
+                   _p = v
+                   break
+               end
+           end
+        end
+        print(_p.PlayerData:completeEvent("IntroducedToGym1"))
+    end
+})
 Page.Button({
     Text = "Pokedollars Giver",
     Callback = function()
@@ -378,6 +453,20 @@ Page5.Button({
     Text = "Show UMV Rocks",
 Callback = function()
 loadstring(game:HttpGet("https://pastebin.com/raw/uubLUH5d"))()
+end
+})
+
+Page5.Button({
+    Text = "Become A Submarine",
+Callback = function()
+    local Sub = true
+    if LPlr.Character ~= nil and LPlr.Character:FindFirstChild("UMVModel") then
+        Sub = false
+    end
+    if Val ~= nil then
+        Sub = Val
+    end
+    Get:InvokeServer(AuthKey, "ToggleSubmarine", Sub)
 end
 })
 
