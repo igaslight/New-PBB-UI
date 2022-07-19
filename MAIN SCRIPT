@@ -18,7 +18,7 @@ local Page = UI.New({
 })
 
 local Settings = UI.New({
-    Title = "Settings"
+    Title = "Story"
 })
 
 local Gyms = UI.New({
@@ -47,21 +47,6 @@ Gyms.Dropdown({
     end
     end,
     Options = {"Leader", "Exit"}
-})
-
-
-Settings.Dropdown({
-    Text = "UI Theme",
-    Callback = function(value)
-    
-    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Light")()
-    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Dark")()
-    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Mocha")()
-    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Aqua")()
-    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Jester")()    
-    end
-    end,
-    Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
 })
 
 Settings.Button({
@@ -232,11 +217,11 @@ local _p = nil
                end
            end
         end
-         _p.Network:get("PDS", "AlolanReward",155000)
+         _p.Network:get("PDS", "AlolanReward",148500)
         _p.Network:get('PDS', 'getShop','arcade')
 _p.Network:get('PDS','tMaxBuy', 2)
-_p.Network:get('PDS','buyWithTix', 2, 89)
-_p.Network:get('PDS','sellItem', "powerbracer", 89)
+_p.Network:get('PDS','buyWithTix', 2, 99)
+_p.Network:get('PDS','sellItem', "powerbracer", 99)
     end
 })
 
@@ -311,6 +296,20 @@ Page.Button({
 Callback = function()
 loadstring(game:HttpGetAsync('https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Universal%20Fly', true))()
 end
+})
+
+Page.Dropdown({
+    Text = "UI Theme",
+    Callback = function(value)
+    
+    if(value == "Light") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Light")()
+    elseif(value == "Dark") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Dark")()
+    elseif(value == "Mocha") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Mocha")()
+    elseif(value == "Aqua") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Aqua")()
+    elseif(value == "Jester") then loadstring(game:HttpGet"https://raw.githubusercontent.com/igaslight/New-PBB-UI/main/Theme%20%3A%20Jester")()    
+    end
+    end,
+    Options = {"Light", "Dark", "Mocha", "Aqua", "Jester"}
 })
 
 local Page2 = UI.New({
